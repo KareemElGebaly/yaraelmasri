@@ -2,7 +2,6 @@ backend:
   name: github
   repo: KareemElGebaly/yaraelmasri
   branch: main
-  site_domain: yaraelmasri.netlify.app
 
 media_folder: "public/images"
 public_folder: "/images"
