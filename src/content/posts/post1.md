@@ -1,7 +1,7 @@
 ---
 title: عنوان المقال الأول
 description: مثال على ترجمة أدبية.
-pubDate: 2025-07-30
+pubDate: "2025-07-30"
 category: قصائد
 image: /images/sample.jpg
 ---
