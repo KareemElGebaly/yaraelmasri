@@ -2,7 +2,8 @@ backend:
   name: github
   repo: KareemElGebaly/yaraelmasri
   branch: main
-  auth_scope: repo
+  aauth_type: oauth
+  app_id: Ov23liEAprHpB3FApR86
 
 media_folder: "public/images"
 public_folder: "/images"
