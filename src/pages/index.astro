@@ -1,19 +1,22 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const posts = await getCollection("posts");
-type Post = CollectionEntry<"posts">;
+const posts = await getCollection('posts');
 ---
-<Layout title="مدونة يارا المصري" description="ترجمات الأدب الصيني إلى العربية.">
-  <main>
-    <h1>أحدث الترجمات</h1>
-    <ul>
-      {posts.map((post: Post) => (
-        <li>
-          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-        </li>
-      ))}
-    </ul>
-  </main>
+
+<Layout title="مدونة يارا" description="ترجمات أدبية من الصينية إلى العربية ونصائح للمترجمين.">
+  <h2 style="text-align:center; font-size: 1.5rem; margin-bottom: 2rem;">أحدث المنشورات</h2>
+
+  <ul style="list-style: none; padding: 0;">
+    {posts.map(post => (
+      <li style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">
+        <a href={`/posts/${post.slug}/`}>
+          <h3 style="margin: 0 0 0.5rem;">{post.data.title}</h3>
+        </a>
+        <p style="color: #777; margin: 0 0 0.5rem;">📅 {new Date(post.data.pubDate).toLocaleDateString('ar-EG')}</p>
+        <p style="margin: 0 0 0.5rem;">{post.data.description}</p>
+      </li>
+    ))}
+  </ul>
 </Layout>
