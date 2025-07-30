@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: KareemElGebaly/yaraelmasri
+  name: git-gateway
   branch: main
   site_domain: yaraelmasri.netlify.app
 
